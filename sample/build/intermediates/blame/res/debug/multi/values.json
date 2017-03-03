@@ -1,0 +1,83 @@
+[
+    {
+        "outputFile": "G:\\AndroidStudioApplicationPlace\\GPUImage\\sample\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values\\values.xml",
+        "map": [
+            {
+                "to": {
+                    "startLine": 2,
+                    "startColumn": 4,
+                    "startOffset": 55,
+                    "endColumn": 52,
+                    "endOffset": 103
+                },
+                "from": {
+                    "file": "G:\\AndroidStudioApplicationPlace\\GPUImage\\sample\\res\\values\\strings.xml",
+                    "position": {
+                        "startLine": 2,
+                        "startColumn": 4,
+                        "startOffset": 17,
+                        "endColumn": 52,
+                        "endOffset": 65
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 3,
+                    "startColumn": 4,
+                    "startOffset": 108,
+                    "endColumn": 72,
+                    "endOffset": 176
+                },
+                "from": {
+                    "file": "G:\\AndroidStudioApplicationPlace\\GPUImage\\sample\\res\\values\\strings.xml",
+                    "position": {
+                        "startLine": 3,
+                        "startColumn": 4,
+                        "startOffset": 70,
+                        "endColumn": 72,
+                        "endOffset": 138
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 4,
+                    "startColumn": 4,
+                    "startOffset": 181,
+                    "endColumn": 57,
+                    "endOffset": 234
+                },
+                "from": {
+                    "file": "G:\\AndroidStudioApplicationPlace\\GPUImage\\sample\\res\\values\\styles.xml",
+                    "position": {
+                        "startLine": 2,
+                        "startColumn": 4,
+                        "startOffset": 17,
+                        "endColumn": 58,
+                        "endOffset": 71
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 5,
+                    "startColumn": 4,
+                    "startOffset": 239,
+                    "endColumn": 91,
+                    "endOffset": 326
+                },
+                "from": {
+                    "file": "G:\\AndroidStudioApplicationPlace\\GPUImage\\sample\\res\\values\\styles.xml",
+                    "position": {
+                        "startLine": 3,
+                        "startColumn": 4,
+                        "startOffset": 76,
+                        "endColumn": 92,
+                        "endOffset": 164
+                    }
+                }
+            }
+        ]
+    }
+]

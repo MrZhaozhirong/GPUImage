@@ -1,0 +1,14 @@
+[
+    {
+        "merged": "G:\\AndroidStudioApplicationPlace\\GPUImage\\sample\\build\\intermediates\\res\\merged\\debug\\layout\\activity_camera.xml",
+        "source": "G:\\AndroidStudioApplicationPlace\\GPUImage\\sample\\res\\layout\\activity_camera.xml"
+    },
+    {
+        "merged": "G:\\AndroidStudioApplicationPlace\\GPUImage\\sample\\build\\intermediates\\res\\merged\\debug\\layout\\activity_main.xml",
+        "source": "G:\\AndroidStudioApplicationPlace\\GPUImage\\sample\\res\\layout\\activity_main.xml"
+    },
+    {
+        "merged": "G:\\AndroidStudioApplicationPlace\\GPUImage\\sample\\build\\intermediates\\res\\merged\\debug\\layout\\activity_gallery.xml",
+        "source": "G:\\AndroidStudioApplicationPlace\\GPUImage\\sample\\res\\layout\\activity_gallery.xml"
+    }
+]

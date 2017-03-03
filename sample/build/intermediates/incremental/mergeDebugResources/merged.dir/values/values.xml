@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">GPUImage Sample</string>
+    <string name="title_activity_activity_main">GPUImage Sample</string>
+    <style name="AppTheme" parent="android:Theme.Light"/>
+    <style name="AppTheme.NoActionBar" parent="android:Theme.Light.NoTitleBar.Fullscreen"/>
+</resources>
