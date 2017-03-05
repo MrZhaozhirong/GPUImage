@@ -83,7 +83,7 @@ public class FilterProgram {
         if (!mIsInitialized) {
             return;
         }
-        //创建矩形大小缓冲区对象
+        //创建显示区域矩形缓冲区对象
         cubeBuffer.position(0);
         GLES20.glVertexAttribPointer(mGLAttribPosition, 2, GLES20.GL_FLOAT, false, 0, cubeBuffer);
         GLES20.glEnableVertexAttribArray(mGLAttribPosition);
