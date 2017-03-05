@@ -1,10 +1,10 @@
 package cn.my.gpuimage.GLCamera;
 
+import android.content.Context;
 import android.graphics.SurfaceTexture;
 import android.hardware.Camera;
 import android.opengl.GLES20;
 import android.opengl.GLSurfaceView;
-import android.util.Log;
 
 import java.io.IOException;
 import java.nio.ByteBuffer;
@@ -21,6 +21,8 @@ import cn.my.gpuimage.common.GPUImageNativeLibrary;
 import cn.my.gpuimage.common.OpenGlUtils;
 import cn.my.gpuimage.common.Rotation;
 import cn.my.gpuimage.common.TextureRotationUtil;
+import cn.my.gpuimage.program.FilterProgram;
+
 import static cn.my.gpuimage.common.TextureRotationUtil.TEXTURE_NO_ROTATION;
 
 /**
@@ -39,10 +41,17 @@ public class GLCameraRenderer implements GLSurfaceView.Renderer, Camera.PreviewC
         mBackgroundBlue = blue;
     }
 
+    static final float CUBE[] = {
+            -1.0f, -1.0f,
+            1.0f, -1.0f,
+            -1.0f, 1.0f,
+            1.0f, 1.0f,
+    };
     private final Queue<Runnable> mRunOnDraw;
-
-    public GLCameraRenderer(){
+    private FilterProgram mFilterProgram;
+    public GLCameraRenderer(Context context){
         mRunOnDraw = new LinkedList<Runnable>();
+        mFilterProgram = new FilterProgram(context);
 
         mGLCubeBuffer = ByteBuffer.allocateDirect(CUBE.length * 4)
                 .order(ByteOrder.nativeOrder())
@@ -55,12 +64,6 @@ public class GLCameraRenderer implements GLSurfaceView.Renderer, Camera.PreviewC
         setRotation(Rotation.NORMAL, false, false);
     }
 
-    static final float CUBE[] = {
-            -1.0f, -1.0f,
-            1.0f, -1.0f,
-            -1.0f, 1.0f,
-            1.0f, 1.0f,
-    };
     private SurfaceTexture mSurfaceTexture = null;
     private Rotation mRotation;
     private boolean mFlipHorizontal;
@@ -92,13 +95,16 @@ public class GLCameraRenderer implements GLSurfaceView.Renderer, Camera.PreviewC
     public void onSurfaceCreated(GL10 gl, EGLConfig config) {
         GLES20.glClearColor(mBackgroundRed, mBackgroundGreen, mBackgroundBlue, 1f);
         GLES20.glDisable(GLES20.GL_DEPTH_TEST);
+        mFilterProgram.init();
     }
 
     @Override
     public void onSurfaceChanged(GL10 gl, int width, int height) {
         mOutputWidth = width;
-        mOutputHeight = height;
+        mOutputHeight = height - 100;
         GLES20.glViewport(0, 0, width, height);
+        GLES20.glUseProgram(mFilterProgram.getProgram());
+        mFilterProgram.onOutputSizeChanged(mOutputWidth, mOutputHeight);
         adjustImageScaling();
     }
 
@@ -106,10 +112,12 @@ public class GLCameraRenderer implements GLSurfaceView.Renderer, Camera.PreviewC
     public void onDrawFrame(GL10 gl) {
         GLES20.glClear(GLES20.GL_COLOR_BUFFER_BIT | GLES20.GL_DEPTH_BUFFER_BIT);
         runAll(mRunOnDraw);
+        mFilterProgram.onDraw(mGLTextureId, mGLCubeBuffer, mGLTextureBuffer);
         if (mSurfaceTexture != null) {
             mSurfaceTexture.updateTexImage();
         }
     }
+
 
     @Override
     public void onPreviewFrame(final byte[] data, final Camera camera) {
@@ -149,8 +157,10 @@ public class GLCameraRenderer implements GLSurfaceView.Renderer, Camera.PreviewC
     private void setRotation(Rotation rotation,
                              boolean flipVertical, boolean flipHorizontal) {
         mRotation = rotation;
-        mFlipHorizontal = flipHorizontal;
-        mFlipVertical = flipVertical;
+        //mFlipHorizontal = flipHorizontal;
+        //mFlipVertical = flipVertical;
+        mFlipVertical = flipHorizontal;
+        mFlipHorizontal = flipVertical;
         adjustImageScaling();
     }
 
@@ -198,7 +208,12 @@ public class GLCameraRenderer implements GLSurfaceView.Renderer, Camera.PreviewC
     }
 
     private float addDistance(float coordinate, float distance) {
-        return coordinate == 0.0f ? distance : 1 - distance;
+        if(coordinate == 0.0f){
+            return distance;
+        }else{
+            return 1 - distance;
+        }
+        //return coordinate == 0.0f ? distance : 1 - distance;
     }
 
 

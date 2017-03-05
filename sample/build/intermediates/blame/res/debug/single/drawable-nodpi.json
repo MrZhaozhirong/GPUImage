@@ -2,5 +2,9 @@
     {
         "merged": "G:\\AndroidStudioApplicationPlace\\GPUImage\\sample\\build\\intermediates\\res\\merged\\debug\\drawable-nodpi\\lookup_amatorka.png",
         "source": "G:\\AndroidStudioApplicationPlace\\GPUImage\\sample\\res\\drawable-nodpi\\lookup_amatorka.png"
+    },
+    {
+        "merged": "E:\\AndroidStudioWorkSpace\\GPUImage\\sample\\build\\intermediates\\res\\merged\\debug\\drawable-nodpi\\lookup_amatorka.png",
+        "source": "E:\\AndroidStudioWorkSpace\\GPUImage\\sample\\res\\drawable-nodpi\\lookup_amatorka.png"
     }
 ]

@@ -1,5 +1,13 @@
 [
     {
+        "merged": "E:\\AndroidStudioWorkSpace\\GPUImage\\sample\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\ic_launcher.png",
+        "source": "E:\\AndroidStudioWorkSpace\\GPUImage\\sample\\res\\drawable-xhdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "E:\\AndroidStudioWorkSpace\\GPUImage\\sample\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\ic_action_search.png",
+        "source": "E:\\AndroidStudioWorkSpace\\GPUImage\\sample\\res\\drawable-xhdpi\\ic_action_search.png"
+    },
+    {
         "merged": "G:\\AndroidStudioApplicationPlace\\GPUImage\\sample\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\ic_launcher.png",
         "source": "G:\\AndroidStudioApplicationPlace\\GPUImage\\sample\\res\\drawable-xhdpi\\ic_launcher.png"
     },

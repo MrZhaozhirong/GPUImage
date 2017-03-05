@@ -1,5 +1,9 @@
 [
     {
+        "merged": "E:\\AndroidStudioWorkSpace\\GPUImage\\sample\\build\\intermediates\\res\\merged\\debug\\raw\\tone_cuver_sample.acv",
+        "source": "E:\\AndroidStudioWorkSpace\\GPUImage\\sample\\res\\raw\\tone_cuver_sample.acv"
+    },
+    {
         "merged": "G:\\AndroidStudioApplicationPlace\\GPUImage\\sample\\build\\intermediates\\res\\merged\\debug\\raw\\tone_cuver_sample.acv",
         "source": "G:\\AndroidStudioApplicationPlace\\GPUImage\\sample\\res\\raw\\tone_cuver_sample.acv"
     }

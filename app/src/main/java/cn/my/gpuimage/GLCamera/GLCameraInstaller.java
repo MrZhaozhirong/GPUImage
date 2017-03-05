@@ -6,6 +6,7 @@ import android.graphics.PixelFormat;
 import android.hardware.Camera;
 import android.opengl.GLSurfaceView;
 import android.os.Build;
+import android.util.Log;
 
 import cn.my.gpuimage.common.Rotation;
 
@@ -23,16 +24,10 @@ public class GLCameraInstaller {
     private GLSurfaceView mGlSurfaceView;
     private GLCameraRenderer mRenderer;
 
-    public GLCameraInstaller(Context context){
-        this.mContext = context;
-        mCameraHelper = CameraHelper.getInstance(context);
-        mRenderer = new GLCameraRenderer();
-    }
-
     public GLCameraInstaller(Context context, GLSurfaceView glSurfaceView){
         this.mContext = context;
         mCameraHelper = CameraHelper.getInstance(context);
-        mRenderer = new GLCameraRenderer();
+        mRenderer = new GLCameraRenderer(context);
         setGLSurfaceView(glSurfaceView);
     }
 

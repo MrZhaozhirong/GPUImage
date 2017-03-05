@@ -8,7 +8,19 @@
         "source": "G:\\AndroidStudioApplicationPlace\\GPUImage\\sample\\res\\layout\\activity_main.xml"
     },
     {
+        "merged": "E:\\AndroidStudioWorkSpace\\GPUImage\\sample\\build\\intermediates\\res\\merged\\debug\\layout\\activity_main.xml",
+        "source": "E:\\AndroidStudioWorkSpace\\GPUImage\\sample\\res\\layout\\activity_main.xml"
+    },
+    {
+        "merged": "E:\\AndroidStudioWorkSpace\\GPUImage\\sample\\build\\intermediates\\res\\merged\\debug\\layout\\activity_camera.xml",
+        "source": "E:\\AndroidStudioWorkSpace\\GPUImage\\sample\\res\\layout\\activity_camera.xml"
+    },
+    {
         "merged": "G:\\AndroidStudioApplicationPlace\\GPUImage\\sample\\build\\intermediates\\res\\merged\\debug\\layout\\activity_gallery.xml",
         "source": "G:\\AndroidStudioApplicationPlace\\GPUImage\\sample\\res\\layout\\activity_gallery.xml"
+    },
+    {
+        "merged": "E:\\AndroidStudioWorkSpace\\GPUImage\\sample\\build\\intermediates\\res\\merged\\debug\\layout\\activity_gallery.xml",
+        "source": "E:\\AndroidStudioWorkSpace\\GPUImage\\sample\\res\\layout\\activity_gallery.xml"
     }
 ]
